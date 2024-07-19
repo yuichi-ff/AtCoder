@@ -2,23 +2,12 @@ N = int(input())
 A = list(map(int,input().split()))
 W = list(map(int,input().split()))
 
-"""
-tyofukusu = len(A) - len(set(A))
-
-W_sorted = sorted(W)
-
 cost = 0
-for i in range(tyofukusu):
-    cost += W_sorted[i]"""
+maxcosts = [0 for _ in range(N)]
 
-AW = sorted(list(zip(A,W)))
+for i in range(N):
+    i_box = A[i]-1
+    weight = W[i]
+    maxcosts[i_box] = max(maxcosts[i_box],weight)
 
-cost = 0
-aset = set(A)
-index = 0
-
-for i in range(len(aset)):
-    j = aset[i]
-    cost += max(AW[:j])
-
-print(sum(W) - cost)
+print(sum(W) - sum(maxcosts))
