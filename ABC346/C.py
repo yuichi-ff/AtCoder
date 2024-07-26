@@ -1,3 +1,5 @@
+# from sortedcontainers import SortedSort
+
 N, K = map(int,input().split())
 A = set(list(map(int,input().split())))
 
