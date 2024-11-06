@@ -1,3 +1,6 @@
+# ファイルの置き場所間違ってますよ
+# そうですか……
+
 N = int(input())
 AB = [list(map(int,input().split())) for _ in range(N)]
 
